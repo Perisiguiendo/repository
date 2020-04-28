@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.contain {
+    float: right;
+    background-color: rgba(87, 91, 94, 0.85);
+    width: 1300px;
+    height: 100%;
+    right: 100px;
+    position: fixed;
+    overflow-y: auto;
+}
+
+/*.auto_y {*/
+/*    float: right;*/
+/*    width: 200px;*/
+/*    height: 100px;*/
+/*    right: 20px;*/
+
+
+/*    overflow-y: auto;*/
+/*    background-color: white;*/
+/*}*/
+
+.congratulations {
+    list-style: none;
+    display: inline;
+    clear: bottom;
+    border: aliceblue 2px;
+}
+
+.congratulations li {
+    display: inline-block;
+
+}
+
+.ball001 {
+    width: 120px;
+    height: 400px;
+    margin-left: 150px;
+}
+
+.pic_ball001 {
+    width: 100px;
+    height: 100px;
+    margin-top: 220px;
+    background-image: url(../images/ball001.png);
+    background-repeat: no-repeat;
+}
+
+.ball002 {
+    width: 120px;
+    height: 400px;
+} 
+
+.pic_ball002 {
+    width: 100px;
+    height: 100px;
+    margin-top: 170px;
+    margin-left: 30px;
+    background-image: url(../images/ball002.png);
+    background-repeat: no-repeat;
+}
+
+.ball003 {
+    width: 120px;
+    height: 400px;
+}
+
+.pic_ball003 {
+    width: 100px;
+    height: 100px;
+    margin-top: 270px;
+    margin-left: 50px;
+    background-image: url(../images/ball003.png);
+    background-repeat: no-repeat;
+}
+
+.pat {
+    width: 640px;
+    height: 400px;
+}
+
+.pic_pat {
+    width: 600px;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: 50px;
+    background-image: url(../images/pat.png);
+    background-repeat: no-repeat;
+}
+
+.content {
+    width: 1000px;
+    height: 491px;
+    margin-top: 150px;
+    margin-left: 150px;
+    border: 3px solid dimgray;
+}
+
+.profile_word {
+    margin-left: 80px;
+    float: left;
+    color: white;
+    font-family: 微软雅黑;
+}
+
+.profile_word h2 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.profile_word > ol {
+    margin-top: 50px;
+    margin-left: 60px;
+    line-height: 30px;
+}
+
+.read_me {
+    text-align: center;
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    font-size: 20px;
+    color: dimgray;
+    line-height: 40px;
+    font-family: 微软雅黑;
+    font-weight: 700;
+    margin-top: 70px;
+    margin-left: 100px;
+    text-decoration: none;
+}
+
+.profile_word a:hover {
+    background-color: rgb(87, 91, 94);
+    color: white;
+}
+
+.profile_photo {
+    float: right;
+    background-image: url("../images/profile_photo.jpg");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 491px;
+
+}

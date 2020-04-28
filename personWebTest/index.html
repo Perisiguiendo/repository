@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Work</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/maincss.css">
+    <script src="./js/pat_move.js"></script>
+</head>
+
+<body>
+    <div class="main_background">
+        <!--------------------左侧导航栏--------------------------->
+        <div class="banner">
+            <div class="head_shot_photo">
+                <div class="photo"></div>
+                <div class="head_profile">My Work</div>
+            </div>
+            <div class="main">
+                <div class="profile"><a href="#">Profile</a></div>
+                <div class="habit"><a href="#">Habit</a></div>
+                <div class="daily_life"><a href="#">Daily Life</a></div>
+                <div class="school"><a href="#">School</a></div>
+                <div class="email"><a href="#">Contact</a></div>
+            </div>
+            <div class="way">
+                <ul>
+                    <li><a href="#" class="qq"></a></li>
+                    <li><a href="#" class="WeChat"></a></li>
+                    <li><a href="#" class="facebook"></a></li>
+                    <li><a href="#" class="WiFi"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!------------------------右侧主体-------------------------->
+        <!--------------------Profile-------------------------->
+        <div class="contain">
+            <ul class="congratulations">
+                <li class="ball001">
+                    <div class="pic_ball001"></div>
+                </li>
+                <li class="ball002">
+                    <div class="pic_ball002"></div>
+                </li>
+                <li class="ball003">
+                    <div class="pic_ball003"></div>
+                </li>
+                <li class="pat">
+                    <div class="pic_pat"></div>
+                </li>
+            </ul>
+
+            <script>
+                var arr_pic = ["pic_ball001", "pic_ball002", "pic_ball003", "pic_pat"];
+                var index = 0;
+                var tip0 = document.getElementsByClassName(arr_pic[0]);
+                var tip1 = document.getElementsByClassName(arr_pic[1]);
+                var tip2 = document.getElementsByClassName(arr_pic[2]);
+                var tip3 = document.getElementsByClassName(arr_pic[3]);
+
+                var timer = setInterval(function (){
+                    var n = index % 4;
+                    switch(n){
+                        case 0:
+                            // tip0.style.display = "none";
+                            tip1.style.display = "none";
+                            tip2.style.display = "none";
+                            tip3.style.display = "none";
+                            break;
+                        case 1:
+                            tip0.style.display = "none";
+                            // tip1.style.display = "none";
+                            tip2.style.display = "none";
+                            tip3.style.display = "none";
+                            break;
+                        case 2:
+                            tip0.style.display = "none";
+                            tip1.style.display = "none";
+                            // tip2.style.display = "none";
+                            tip3.style.display = "none";
+                            break;
+                        case 3:
+                            tip0.style.display = "none";
+                            tip1.style.display = "none";
+                            tip2.style.display = "none";
+                            // tip3.style.display = "none";
+                            break;
+                    }
+                    n++;
+                    
+            </script>
+
+            <div class="content">
+                <div class="profile_word">
+                    <h2>ピカチュウ</h2>
+                    <ol type="i">
+                        <li>The prototype is a squirrel</li>
+                        <li>Live in the forest</li>
+                        <li>Feed on the fruit</li>
+                        <li>Discharge when exposed to danger</li>
+                        <li>Its ears are long,the tip is black</li>
+                        <li>Its tail is like a jagged lightning</li>
+                    </ol>
+                    <a href="#" class="read_me">READ MORE</a>
+                </div>
+                <div class="profile_photo"></div>
+            </div>
+            <!--------------------Music-------------------------->
+            <div class="content"></div>
+            <!--------------------Movies-------------------------->
+            <div class="content"></div>
+            <!--------------------Profile-------------------------->
+            <div class="content"></div>
+            <!--------------------Profile-------------------------->
+            <div class="content"></div>
+            <!--------------------Profile-------------------------->
+            <div class="content"></div>
+            <!--------------------Profile-------------------------->
+            <div class="content"></div>
+
+        </div>
+
+        <!--    <div class="auto_y">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>-->
+
+
+
+
+    </div>
+</body>
+
+</html>
