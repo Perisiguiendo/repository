@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0}
+        #main{
+            margin:0 auto;
+            position:relative;
+            background-color:aqua
+        }
+        #main div{
+            position:absolute;
+            width:100px;
+            height: 100px;
+            overflow: hidden;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background-image: url("./images/ball001.png");
+            background-repeat: no-repeat;
+        }
+        #red{
+            display: block;
+            width: 120px;
+            height:120px;
+            position: absolute;
+            left:calc(50% - 60px);
+            top:calc(50% - 60px);
+            background-image: url("./images/ball001.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <span id="red"></span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<script src="./js/pat.js"></script>
+</body>
+</html>

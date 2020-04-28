@@ -3,6 +3,18 @@
     margin: 0;
 }
 
+canvas {
+
+    margin-left: 320px;
+    margin-top: 100px;
+
+}
+
+.game{
+    margin-left: 450px;
+    margin-top: 40px;
+}
+
 .contain {
     float: right;
     background-color: rgba(87, 91, 94, 0.85);
@@ -12,17 +24,6 @@
     position: fixed;
     overflow-y: auto;
 }
-
-/*.auto_y {*/
-/*    float: right;*/
-/*    width: 200px;*/
-/*    height: 100px;*/
-/*    right: 20px;*/
-
-
-/*    overflow-y: auto;*/
-/*    background-color: white;*/
-/*}*/
 
 .congratulations {
     list-style: none;
@@ -53,7 +54,7 @@
 .ball002 {
     width: 120px;
     height: 400px;
-} 
+}
 
 .pic_ball002 {
     width: 100px;
@@ -112,7 +113,7 @@
     margin-top: 60px;
 }
 
-.profile_word > ol {
+.profile_word>ol {
     margin-top: 50px;
     margin-left: 60px;
     line-height: 30px;

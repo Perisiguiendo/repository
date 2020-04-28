@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="hangman.css" type="text/css" rel="stylesheet" />
-    <script src="hangman.js" type="text/javascript"></script>
+    <link href="./css/hangman.css" type="text/css" rel="stylesheet" />
+    <script src="./js/hangman.js" type="text/javascript"></script>
 </head>
 <body>
-    <div><img id="hangmanpic" src="hangman7.gif" alt="hangman"/></div>
+    <div><img id="hangman_pic" src="./images/hangman7.gif" alt="hangman"/></div>
     <div id="clue">按新游戏按钮开始游戏</div>
     <div>
         <input id="guess" type="text" size="1" maxlength="1"/>
         <button onclick="guessLetter();">猜字母</button>
     </div>
-    <div id="newgamearea">
+    <div id="new_game_area">
         <button onclick="newGame();">新游戏</button>
     </div>
     <div id="guesses"></div>

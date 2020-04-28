@@ -6,7 +6,6 @@
     <title>Work</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/maincss.css">
-    <script src="./js/pat_move.js"></script>
 </head>
 
 <body>
@@ -36,7 +35,138 @@
         <!------------------------右侧主体-------------------------->
         <!--------------------Profile-------------------------->
         <div class="contain">
-            <ul class="congratulations">
+            <canvas id="canvas" width="600" height="600"></canvas>
+            <script language="javascript">
+                var Canvas = { //属性
+                    Context: document.getElementById("canvas").getContext('2d'),
+                    //擦除
+                    Clear: function () {
+                        var cxt = Canvas.Context;
+                        var width = cxt.canvas.width;
+                        var height = cxt.canvas.height;;
+                        this.Context.clearRect(0, 0, width, height);
+                    },
+                    //radius钟表半径,sencondScaleWidth刻度长度，secondHandWidth秒针长度
+                    CreateClock: function (radius, sencondScaleWidth, secondHandWidth) {
+                        var me = this;
+                        var radius = radius;
+                        var sencondScaleWidth = sencondScaleWidth;
+                        var secondHandWidth = secondHandWidth;
+                        //小时刻度
+                        var hourScaleWidth = sencondScaleWidth * 2;
+                        //时针分针长度
+                        var hourHandWidth = secondHandWidth * 80 / 100;
+                        //分针长度
+                        var minuteHandWidth = secondHandWidth * 90 / 100;
+                        //确定圆心坐标
+                        var point = {
+                            x: this.Context.canvas.width / 2,
+                            y: this.Context.canvas.height / 2
+                        };
+                        var ctx = this.Context; //获取上下文
+                        //绘制圆圈
+
+                        function drawCircle() {
+
+                            ctx.save(); //记录画笔状态
+                            //确定画笔的位置在圆心点
+                            ctx.translate(point.x, point.y);
+                            //ctx.fillStyle = "black";
+                            ctx.strokeStyle = "gray";
+                            ctx.lineWidth = 2;
+                            ctx.beginPath(); //开始绘制路径
+                            ctx.arc(0, 0, radius, 0, Math.PI * 2);
+                            ctx.closePath(); //关闭路径
+                            ctx.stroke(); //绘制
+                            ctx.restore(); //复位
+
+                        }
+                        //绘制刻度
+                        function drawScale() {
+                            ctx.save(); //记录画笔状态
+                            var perHourRadian = Math.PI / 6;
+                            var perMinuteRadian = Math.PI / 30;
+                            //确定画笔的位置在圆心点
+                            ctx.translate(point.x, point.y);
+                            ctx.strokeStyle = "gray";
+
+                            //此处为了省事，只在表盘上简单的写了几个时间数字
+                            ctx.font = "bold 30px impack"
+                            var dc = radius - hourScaleWidth - 30;
+                            ctx.fillText("3", dc, 10);
+                            ctx.fillText("6", -10, dc);
+                            ctx.fillText("9", -dc, 10);
+                            ctx.fillText("12", -15, -dc);
+                            ctx.stroke();
+
+                            for (var i = 0; i < 12; i++) {
+                                //坐标旋转
+                                ctx.rotate(perHourRadian);
+                                ctx.moveTo(radius - hourScaleWidth, 0);
+                                ctx.lineTo(radius, 0);
+                            }
+
+                            for (var i = 0; i < 60; i++) {
+                                //坐标旋转
+                                ctx.rotate(perMinuteRadian);
+                                ctx.moveTo(radius - sencondScaleWidth, 0);
+                                ctx.lineTo(radius, 0);
+                            }
+
+                            ctx.stroke(); //绘制
+                            ctx.restore();
+
+                            //radian 
+                        }
+                        //drawScale();
+                        function drawHand() {
+
+                            var myDate = new Date();
+                            var curHour = myDate.getHours();
+                            var curMinute = myDate.getMinutes();
+                            var curSecond = myDate.getSeconds();
+
+                            //绘制时针
+                            curHour = curHour > 12 ? curHour - 12 : curHour;
+                            var hourRadian = (curHour + curMinute / 60 + curSecond / 3600) * (Math.PI / 6);
+                            //绘制分针
+                            var minuteRadian = (curMinute + curSecond / 60) * (Math.PI / 30);
+                            //绘制秒针
+                            var secondRadian = curSecond * (Math.PI / 30);
+
+                            function run(radian, width, color) {
+                                ctx.save();
+                                ctx.translate(point.x, point.y);
+                                ctx.rotate(-Math.PI / 2);
+                                ctx.strokeStyle = color
+                                ctx.beginPath();
+                                ctx.rotate(radian);
+                                ctx.moveTo(0, 0);
+                                ctx.lineTo(width, 0);
+                                ctx.closePath();
+                                ctx.stroke();
+                                ctx.restore();
+                            }
+                            run(hourRadian, hourHandWidth, "black");
+                            run(minuteRadian, minuteHandWidth, "green");
+                            run(secondRadian, secondHandWidth, "red");
+
+
+                        }
+                        //drawHand();
+                        function drawAll() {
+                            me.Clear();
+                            drawCircle();
+                            drawScale();
+                            drawHand();
+                        }
+                        setInterval(drawAll, 1000);
+                    }
+                };
+                Canvas.CreateClock(290, 20, 200);
+            </script>
+
+            <!-- <ul class="congratulations">
                 <li class="ball001">
                     <div class="pic_ball001"></div>
                 </li>
@@ -49,47 +179,11 @@
                 <li class="pat">
                     <div class="pic_pat"></div>
                 </li>
-            </ul>
+            </ul> -->
 
-            <script>
-                var arr_pic = ["pic_ball001", "pic_ball002", "pic_ball003", "pic_pat"];
-                var index = 0;
-                var tip0 = document.getElementsByClassName(arr_pic[0]);
-                var tip1 = document.getElementsByClassName(arr_pic[1]);
-                var tip2 = document.getElementsByClassName(arr_pic[2]);
-                var tip3 = document.getElementsByClassName(arr_pic[3]);
-
-                var timer = setInterval(function (){
-                    var n = index % 4;
-                    switch(n){
-                        case 0:
-                            // tip0.style.display = "none";
-                            tip1.style.display = "none";
-                            tip2.style.display = "none";
-                            tip3.style.display = "none";
-                            break;
-                        case 1:
-                            tip0.style.display = "none";
-                            // tip1.style.display = "none";
-                            tip2.style.display = "none";
-                            tip3.style.display = "none";
-                            break;
-                        case 2:
-                            tip0.style.display = "none";
-                            tip1.style.display = "none";
-                            // tip2.style.display = "none";
-                            tip3.style.display = "none";
-                            break;
-                        case 3:
-                            tip0.style.display = "none";
-                            tip1.style.display = "none";
-                            tip2.style.display = "none";
-                            // tip3.style.display = "none";
-                            break;
-                    }
-                    n++;
-                    
-            </script>
+            <div class="game">
+                <a class="read_me" href="./word.html">猜字游戏</a> 
+            </div>
 
             <div class="content">
                 <div class="profile_word">
@@ -106,6 +200,20 @@
                 </div>
                 <div class="profile_photo"></div>
             </div>
+            <div id="main">
+                <span id="red"></span>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <script src="./js/pat.js"></script>
             <!--------------------Music-------------------------->
             <div class="content"></div>
             <!--------------------Movies-------------------------->
