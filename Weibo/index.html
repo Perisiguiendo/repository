@@ -5,28 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/nav_top.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/content.css">
+
 </head>
 <body>
     <!------------------------ 顶栏 ------------------------->
-    <section class="nav_top">
+    <div class="nav_top">
         <div class="logo"></div>
         <div class="search">
-            <input type="text" class="input_text" placeholder="weibo">
-            <a href="" class="search_icon"></a>
+            <input type="text" class="input_text" placeholder="大家正在搜：">
+            <a href="#" class="search_icon"></a>
         </div>
         <ul class="list_top">
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            <li><a class="home" href="#"></a></li>
+            <li><a class="video" href="#"></a></li>
+            <li><a class="find" href="#"></a></li>
+            <li><a class="game" href="#"></a></li>
         </ul>
-        <!-- <ul class="top">
-            <li><a class="home" href="#">3</a></li>
-            <li><a class="video" href="#">4</a></li>
-            <li><a class="find" href="#">5</a></li>
-            <li><a class="game" href="#">6</a></li>
-        </ul> -->
+        <a href="#" class="sign_in">注册</a>
+        <span class="sign_log">|</span>
+        <a href="#" class="log_in">登录</a>
+    </div>
+    <!------------------------ 内容栏 -------------------------->
+    <div class="next">
+        <!-------------------- 导航栏 --------------------->
+        <div class="banner">
+            <ul class="toolbar">
+                <li><a href="#">热门</a></li>
+                <li><a href="#">头条</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">榜单</a></li>
+                <li><a href="#">搞笑</a></li>
+                <li><a href="#">社会</a></li>
+                <li><a href="#">时尚</a></li>
+                <li><a href="#">电影</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">体育</a></li>
+                <li><a href="#">动漫</a></li>
+            </ul>
+        </div>
+        <!-------------------- 主要内容 ---------------------->
+        <div class="content">
+            <div class="slideshow">
+                <div class="left">
+                    <a href="#">
+                        <h1>#第一次坐飞机是什么感受#</h1>
+                        <h4>
+                            <span>1.5万讨论</span>
+                            <span>1.6亿阅读</span>
+                        </h4>
+                    </a>
+                </div>
+                <div class="right_top">
+                    <a href="#">
+                        <h1>#朱广权说的就是我#</h1>
+                    </a>
+                </div>
+                <div class="right_bottom">
+                    <a href="#">
+                        <h1>#全年票房损失将超300亿元#</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="new001">
 
-    </section>
+            </div>
+            <div class="new002">
+
+            </div>
+            <div class="new003">
+
+            </div>
+            <div class="new004">
+
+            </div>
+            <div class="new005">
+                
+            </div>
+        </div>
+        <!--------------------- 登录栏 ---------------------->
+        <div class="login">
+            <div class="login_bg">
+                <div class="login_content">
+                    <div class="account">
+                        <a href="#" class="account_sign">账号登录</a>
+                        <a href="#" class="secure_sign">安全登录</a>
+                        <div class="email">
+                            <div class="head"></div>
+                            <input type="text" class="email_account" placeholder="邮箱/会员账号/手机号">
+                        </div>
+                        <div class="password">
+                            <div class="pass"></div>
+                            <input type="text" class="password_input" placeholder="请输入密码">
+                        </div>
+                        <div class="remember_forgot">
+                            <input type="checkbox" name="记住账号密码" class="checkbox">
+                            <span class="remember">记住我</span>
+                            <span class="forgot">忘记密码</span>
+                        </div>
+                        <a href="#" class="login_account">登录</a>
+                        <div class="immediate">
+                            <span class="no_account">还没有微博？</span>
+                            <a href="#" class="imm_sign_in">立即注册！</a>
+                        </div>
+                        <div class="method">
+                            <span class="other">其他登录：</span>
+                            <ul class="sign_icon">
+                                <li><a href="#" class="taobao"></a></li>
+                                <li><a href="#" class="qq"></a></li>
+                                <li><a href="#" class="mobile"></a></li>
+                                <li><a href="#" class="telecom"></a></li>
+                                <li><a href="#" class="three"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------- 刷新栏 ---------------------->
+        <div class="right_bar">
+            <div class="blank"></div>
+            <a href="#" class="refresh"></a>
+            <a href="#" class="return"></a>
+        </div>
+    </div>
 </body>
 </html>

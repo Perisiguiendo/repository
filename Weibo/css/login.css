@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    outline: none;
+}
+
+.login_bg {
+    background-color: rgb(242, 242, 245);
+    width: 350px;
+    height: 325px;
+}
+
+.login_content {
+    background-color: rgb(255, 255, 255);
+    width: 307px;
+    height: 288px;
+    margin-left: 18px;
+    margin-top: 18px;
+    position: absolute;
+    border: 1px solid rgb(231, 231, 234);
+}
+
+.account_sign,
+.secure_sign {
+    color: rgb(128, 128, 128);
+    font-size: 14px;
+    margin-top: 15px;
+    width: 138px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.account_sign {
+    margin-left: 15px;
+    float: left;
+    border-bottom: 3px solid rgb(250, 125, 60);
+}
+
+.secure_sign {
+    margin-right: 15px;
+    float: right;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.email,
+.password {
+    margin-top: 10px;
+    clear: both;
+    margin-left: 15px;
+    width: 275px;
+    height: 32px;
+    border: 1px solid rgb(204, 204, 204);
+    margin-top: 10px;
+}
+
+.head {
+    background-image: url("../images/account.jpg");
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+.pass {
+    background-image: url("../images/password.jpg");
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+.email_account,
+.password_input {
+    height: 20px;
+    margin-top: 6px;
+    border: 0;
+}
+
+.remember_forgot {
+    height: 40px;
+    line-height: 40px;
+}
+
+.remember,
+.forgot,
+.no_account,
+.other {
+    font-size: 13px;
+    color: rgb(128, 128, 128);
+}
+
+.checkbox {
+    margin-left: 15px;
+}
+
+.forgot {
+    margin-left: 162px;
+}
+
+.login_account {
+    display: inline-block;
+    margin-left: 15px;
+    width: 275px;
+    height: 32px;
+    background-color: rgb(255, 129, 64);
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+.immediate {
+    height: 35px;
+    width: 275px;
+    margin-left: 15px;
+    text-align: left;
+    line-height: 35px;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.imm_sign_in {
+    font-size: 13px;
+    color: rgb(235, 115, 80);
+}
+
+.method {
+    width: 275px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 15px;
+}
+
+.other {
+    float: left;
+}
+
+.method {
+    float: left;
+}
+
+.sign_icon a {
+    float: left;
+    width: 22px;
+    height: 35px;
+}
+
+.taobao {
+    background-image: url("../images/taobao.jpg");
+    background-repeat: no-repeat;
+}
+
+.qq {
+    background-image: url("../images/qq.jpg");
+    background-repeat: no-repeat;
+}
+
+.mobile {
+    background-image: url("../images/mobile.jpg");
+    background-repeat: no-repeat;
+}
+
+.telecom {
+    background-image: url("../images/telecom.jpg");
+    background-repeat: no-repeat;
+}
+
+.three {
+    background-image: url("../images/360.jpg");
+    background-repeat: no-repeat;
+}
+
+.blank {
+    width: 40px;
+    height: 78%;
+}
+
+.refresh,
+.return {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.refresh {
+    background-image: url("../images/refresh.jpg");
+    background-repeat: no-repeat;
+}
+
+.return {
+    background-image: url("../images/top.jpg");
+    background-repeat: no-repeat;
+}
+
+.refresh:hover {
+    background-image: url("../images/hover_refresh.jpg");
+}
+
+.return:hover {
+    background-image: url("../images/hover_top.jpg");
+}

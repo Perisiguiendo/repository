@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
 .nav_top {
     background-color: rgb(255, 255, 255);
     height: 50px;
@@ -44,28 +52,140 @@
     background-image: url("../images/orange_search_icon.jpg");
 }
 
-.search_icon{
+.search_icon {
     float: right;
     width: 40px;
     height: 27px;
     background-image: url("../images/search_icon.jpg");
-    text-decoration: none;
 }
 
-/* 
-.top {
+.list_top {
+    margin-left: 250px;
     list-style: none;
+    float: left;
 }
 
-
-.top li {
-    display: inline;
+.list_top li {
+    float: left;
 }
 
-.top li a {
-    text-decoration: none;
-    height: 50px;
-    line-height: 50px;
-    
+.list_top a {
     display: inline-block;
-} */
+    width: 80px;
+    height: 45px;
+}
+
+.list_top .home {
+    background-image: url("../images/home_img.jpg");
+    background-repeat: no-repeat;
+}
+
+.find:hover {
+    background-image: url("../images/hover_find.jpg");
+    background-repeat: no-repeat;
+}
+
+.video {
+    background-image: url("../images/video_img.jpg");
+    background-repeat: no-repeat;
+}
+
+
+.find {
+    background-image: url("../images/find_img.jpg");
+    background-repeat: no-repeat;
+}
+
+.game {
+    background-image: url("../images/game_img.jpg");
+    background-repeat: no-repeat;
+}
+
+.sign_in {
+    padding-left: 13px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+}
+
+.sign_log {
+    padding: 0 10px;
+    color: rgb(217, 217, 217);
+}
+
+.log_in {
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+}
+
+.sign_in:hover,
+.log_in:hover {
+    color: rgb(235, 115, 80);
+}
+
+.next {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.banner {
+    margin-top: 10px;
+    width: 500px;
+    height: 100%;
+    float: left;
+}
+
+.content {
+    margin-top: 10px;
+    width: 700px;
+    height: 100%;
+    float: left;
+}
+
+.login {
+    margin-top: 10px;
+    border: 1px solid palegreen;
+    width: 350px;
+    height: 100%;
+    float: left;
+}
+
+.right_bar {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 40px;
+    height: 100%;
+    float: left;
+
+}
+
+.toolbar {
+    list-style: none;
+    width: 120px;
+    float: right;
+}
+
+.toolbar li {
+    height: 40px;
+    text-align: center;
+}
+
+.toolbar a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px;
+    color: black;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.toolbar a:hover {
+    background-image: linear-gradient(to right, rgb(251, 54, 48), rgb(254, 85, 53)100%);
+    color: white;
+}
