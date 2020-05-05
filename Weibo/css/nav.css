@@ -14,6 +14,7 @@ ul {
 .nav_top {
     background-color: rgb(255, 255, 255);
     height: 50px;
+    margin: 0 auto;
     border-bottom: 1px solid;
     border-bottom-color: black;
     border-top: 2px solid;
@@ -185,7 +186,13 @@ ul {
     border-radius: 5px;
 }
 
-.toolbar a:hover {
+.toolbar li a:focus,
+.toolbar li a:hover {
+    background-image: linear-gradient(to right, rgb(251, 54, 48), rgb(254, 85, 53)100%);
+    color: white;
+}
+
+.toolbar li a.active{
     background-image: linear-gradient(to right, rgb(251, 54, 48), rgb(254, 85, 53)100%);
     color: white;
 }
