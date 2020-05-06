@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hot_topic {
+    margin-top: 20px;
+    border-top: 1px solid rgb(250, 47, 47);
+    height: 420px;
+    background-color: rgb(242, 242, 245);
+}
+
+.hot_topic h3 {
+    margin: 20px;
+    color: rgb(51, 51, 51);
+}
+
+.ul_hot_topic {
+    margin: 20px;
+}
+
+.ul_hot_topic li {
+    height: 70px;
+}

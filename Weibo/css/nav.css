@@ -12,17 +12,22 @@ ul {
 }
 
 .nav_top {
+    width: 100%;
+    position: fixed;
     background-color: rgb(255, 255, 255);
     height: 50px;
-    margin: 0 auto;
-    border-bottom: 1px solid;
-    border-bottom-color: black;
     border-top: 2px solid;
     border-top-color: rgb(250, 125, 65);
+    box-shadow: 3px 3px 3px rgb(218, 218, 218);
+}
+
+.nav_content {
+    margin: 0 auto;
+    height: 50px;
+    width: 1300px;
 }
 
 .logo {
-    margin-left: 300px;
     float: left;
     background-image: url("../images/logo.jpg");
     width: 133px;
@@ -31,12 +36,12 @@ ul {
 
 .search {
     float: left;
-    margin-left: 400px;
     border: 1px solid rgb(204, 204, 204);
     background-color: rgb(242, 242, 245);
     width: 450px;
     height: 27px;
     margin: 10px;
+    min-width: 100px;
 }
 
 .input_text {
@@ -45,6 +50,7 @@ ul {
     margin-top: 3.4px;
     border: 0px;
     width: 400px;
+    min-width: 70px;
     line-height: 20px;
     background-color: rgb(242, 242, 245);
 }
@@ -110,7 +116,7 @@ ul {
     color: rgb(51, 51, 51);
 }
 
-.sign_log {
+.ver_string {
     padding: 0 10px;
     color: rgb(217, 217, 217);
 }
@@ -128,47 +134,42 @@ ul {
 }
 
 .next {
-    width: 100%;
-    height: 100%;
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.toolbar {
+    margin-top: 70px;
+    list-style: none;
+    width: 120px;
     position: fixed;
 }
 
-.banner {
-    margin-top: 10px;
-    width: 500px;
-    height: 100%;
-    float: left;
-}
-
 .content {
-    margin-top: 10px;
+    margin-top: 70px;
     width: 700px;
     height: 100%;
     float: left;
+    margin-left: 120px;
 }
 
 .login {
-    margin-top: 10px;
-    border: 1px solid palegreen;
+    margin-top: 70px;
     width: 350px;
-    height: 100%;
+    height: 1200px;
+    border: 1px solid khaki;
     float: left;
 }
 
 .right_bar {
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 1200px;
+    margin-top: 70px;
     width: 40px;
     height: 100%;
-    float: left;
-
+    position: fixed;
 }
 
-.toolbar {
-    list-style: none;
-    width: 120px;
-    float: right;
-}
+
 
 .toolbar li {
     height: 40px;
@@ -178,7 +179,7 @@ ul {
 .toolbar a {
     display: inline-block;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 40px;
     color: black;
     width: 110px;
@@ -192,7 +193,7 @@ ul {
     color: white;
 }
 
-.toolbar li a.active{
+.toolbar li a.active {
     background-image: linear-gradient(to right, rgb(251, 54, 48), rgb(254, 85, 53)100%);
     color: white;
 }

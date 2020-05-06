@@ -62,7 +62,11 @@
 .new002,
 .new003,
 .new004,
-.new005 {
+.new005,
+.new006,
+.new007,
+.new008,
+.new009 {
     width: 650px;
     border: 1px solid indigo;
     height: 200px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +8,49 @@
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/hot_topic.css">
 
 </head>
+
 <body>
     <!------------------------ 顶栏 ------------------------->
     <div class="nav_top">
-        <div class="logo"></div>
-        <div class="search">
-            <input type="text" class="input_text" placeholder="大家正在搜：">
-            <a href="#" class="search_icon"></a>
+        <div class="nav_content">
+            <div class="logo"><a href="#"></a></div>
+            <div class="search">
+                <input type="text" class="input_text" placeholder="大家正在搜：">
+                <a href="#" class="search_icon" title="搜索"></a>
+            </div>
+            <ul class="list_top">
+                <li><a class="home" href="#"></a></li>
+                <li><a class="video" href="#"></a></li>
+                <li><a class="find" href="#"></a></li>
+                <li><a class="game" href="#"></a></li>
+            </ul>
+            <a href="#" class="sign_in">注册</a>
+            <span class="ver_string">|</span>
+            <a href="#" class="log_in">登录</a>
         </div>
-        <ul class="list_top">
-            <li><a class="home" href="#"></a></li>
-            <li><a class="video" href="#"></a></li>
-            <li><a class="find" href="#"></a></li>
-            <li><a class="game" href="#"></a></li>
-        </ul>
-        <a href="#" class="sign_in">注册</a>
-        <span class="sign_log">|</span>
-        <a href="#" class="log_in">登录</a>
     </div>
     <!------------------------ 内容栏 -------------------------->
     <div class="next">
         <!-------------------- 导航栏 --------------------->
-        <div class="banner">
-            <ul class="toolbar">
-                <li><a href="#">热门</a></li>
-                <li><a href="#">头条</a></li>
-                <li><a href="#">视频</a></li>
-                <li><a href="#">榜单</a></li>
-                <li><a href="#">搞笑</a></li>
-                <li><a href="#">社会</a></li>
-                <li><a href="#">时尚</a></li>
-                <li><a href="#">电影</a></li>
-                <li><a href="#">音乐</a></li>
-                <li><a href="#">体育</a></li>
-                <li><a href="#">动漫</a></li>
-            </ul>
-        </div>
+        <ul class="toolbar">
+            <li><a href="#">热门</a></li>
+            <li><a href="#">头条</a></li>
+            <li><a href="#">视频</a></li>
+            <li><a href="#">榜单</a></li>
+            <li><a href="#">搞笑</a></li>
+            <li><a href="#">社会</a></li>
+            <li><a href="#">时尚</a></li>
+            <li><a href="#">电影</a></li>
+            <li><a href="#">音乐</a></li>
+            <li><a href="#">体育</a></li>
+            <li><a href="#">动漫</a></li>
+        </ul>
+
         <!-------------------- 主要内容 ---------------------->
+        <!--------------------- 轮播图 ----------------------->
         <div class="content">
             <div class="slideshow">
                 <div class="left">
@@ -68,6 +73,7 @@
                     </a>
                 </div>
             </div>
+            <!--------------------- 动态新闻 -------------------->
             <div class="new001">
 
             </div>
@@ -81,7 +87,19 @@
 
             </div>
             <div class="new005">
-                
+
+            </div>
+            <div class="new006">
+
+            </div>
+            <div class="new007">
+
+            </div>
+            <div class="new008">
+
+            </div>
+            <div class="new009">
+
             </div>
         </div>
         <!--------------------- 登录栏 ---------------------->
@@ -102,7 +120,7 @@
                         <div class="remember_forgot">
                             <input type="checkbox" name="记住账号密码" class="checkbox">
                             <span class="remember">记住我</span>
-                            <span class="forgot">忘记密码</span>
+                            <span class="forgot"><a href="#">忘记密码</a></span>
                         </div>
                         <a href="#" class="login_account">登录</a>
                         <div class="immediate">
@@ -122,6 +140,46 @@
                     </div>
                 </div>
             </div>
+            <div class="hot_topic">
+                <h3 class="weibo_hot_topic">微博热门话题</h3>
+                <ul class="ul_hot_topic">
+                    <li class="first_topic">
+                        <a href="#" class="first_topic_a">
+                            <img src="" alt="" class="hot_topic_img">
+                            <span class="hot_topic_title">#QQ回应偷偷删除用户照片</span>
+                            <span class="hot_topic_read">1.6亿阅读 6199评论</span>
+                        </a>
+                    </li>
+                    <li class="second_topic">
+                        <a href="#" class="second_topic_a">
+                            <img src="" alt="" class="hot_topic_img">
+                            <span class="hot_topic_title">#QQ回应偷偷删除用户照片</span>
+                            <span class="hot_topic_read">1.6亿阅读 6199评论</span>
+                        </a>
+                    </li>
+                    <li class="third_topic">
+                        <a href="#" class="third_topic_a">
+                            <img src="" alt="" class="hot_topic_img">
+                            <span class="hot_topic_title">#QQ回应偷偷删除用户照片</span>
+                            <span class="hot_topic_read">1.6亿阅读 6199评论</span>
+                        </a>
+                    </li>
+                    <li class="forth_topic">
+                        <a href="" class="a_QQ_respond_img">
+                            <img src="" alt="" class="hot_topic_img">
+                            <span class="hot_topic_title">#QQ回应偷偷删除用户照片</span>
+                            <span class="hot_topic_read">1.6亿阅读 6199评论</span>
+                        </a>
+                    </li>
+                    <li class="fifth_topic">
+                        <a href="" class="a_QQ_respond_img">
+                            <img src="" alt="" class="hot_topic_img">
+                            <span class="hot_topic_title">#QQ回应偷偷删除用户照片</span>
+                            <span class="hot_topic_read">1.6亿阅读 6199评论</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!--------------------- 刷新栏 ---------------------->
         <div class="right_bar">
@@ -131,4 +189,5 @@
         </div>
     </div>
 </body>
+
 </html>
