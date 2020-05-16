@@ -23,6 +23,7 @@ input {
     border: 1px solid rgb(231, 231, 234);
 }
 
+.forgot,
 .account_sign,
 .secure_sign {
     color: rgb(128, 128, 128);

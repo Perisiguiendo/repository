@@ -6,7 +6,7 @@
 .hot_topic {
     margin-top: 20px;
     border-top: 1px solid rgb(250, 47, 47);
-    height: 420px;
+    height: 490px;
     background-color: rgb(242, 242, 245);
 }
 
@@ -21,4 +21,21 @@
 
 .ul_hot_topic li {
     height: 70px;
+    border: 1px solid violet;
+}
+
+.ul_hot_topic a {
+    display: block;
+    border: 1px solid olive;
+}
+
+.hot_topic img {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.hot_topic img::after {
+    display: block;
+    /* clear: both; */
 }

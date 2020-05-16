@@ -9,9 +9,43 @@ function showPic(which_pic) {
     description.firstChild.nodeValue = text;
 }
 
-function countBodyChildren() { 
+function countBodyChildren() {
     var body_element = document.getElementsByTagName("body")[0];
     alert(body_element.nodeType);
 }
 
 // window.onload = countBodyChildren;
+
+function prepareGallery() {
+    if (!document.getElementsByTagName) {
+        return false;
+    }
+    if (!document.getElementById) {
+        return false;
+    }
+    if (!document.getElementById("image-gallery")) {
+        return false;
+    }
+    var gallery = document.getElementById("image-gallery");
+    var links = gallery.getElementsByTagName("a");
+
+    for (var i = 0; i < links.length; i++) {
+        links[i].onclick = function () {
+            showPic(links[i]);
+            return false;
+        };
+    }
+}
+
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function() {
+            oldonload();
+            func();
+        }
+    }
+
+}
