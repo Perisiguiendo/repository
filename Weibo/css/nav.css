@@ -12,6 +12,7 @@ ul {
 }
 
 .nav_top {
+    z-index: 9999;
     width: 100%;
     position: fixed;
     background-color: rgb(255, 255, 255);
@@ -157,12 +158,11 @@ ul {
     margin-top: 70px;
     width: 350px;
     height: 1200px;
-    border: 1px solid khaki;
     float: left;
 }
 
 .right_bar {
-    margin-left: 1200px;
+    margin-left: 1530px;
     margin-top: 70px;
     width: 40px;
     height: 100%;

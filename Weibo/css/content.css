@@ -3,59 +3,91 @@
     padding: 0;
 }
 
+.slideshow,
+.spot,
+.new001,
+.new002,
+.new003,
+.new004,
+.new005,
+.new006,
+.new007,
+.new008,
+.new009 {
+    margin-left: 22px;
+}
+
 .slideshow {
+    position: relative;
     width: 650px;
     height: 290px;
-    margin-left: 20px;
-    margin-bottom: 10px;
 }
 
 .left {
     float: left;
     width: 500px;
     height: 290px;
-    background-image: url("../images/plane.jpg");
 }
 
-.left a h1 {
-    margin-top: 240px;
-    font-size: 18px;
-    color: white;
+.left img {
+    position: absolute;
+}
+
+.left h3,
+.left span {
+    position: relative;
+    color: rgb(255, 255, 255);
     margin-left: 10px;
-}
-
-.left a h4 {
-    margin-top: 6px;
-    font-weight: 400;
-    font-size: 10px;
-    color: white;
+    margin-top: 240px;
+    line-height: 25px;
 }
 
 .left span {
-    margin-left: 10px;
+    font-size: 10px;
 }
 
-.right_top {
+.right_top,
+.right_bottom {
+    position: relative;
     float: right;
     width: 140px;
     height: 140px;
     margin-bottom: 10px;
-    background-image: url("../images/study.jpg");
 }
 
-.right_top a h1,
-.right_bottom a h1 {
-    color: white;
-    font-size: 15px;
+.right_top span,
+.right_bottom span {
+    position: absolute;
     margin-top: 100px;
+    left: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
 }
 
+.part {
+    position: absolute;
+}
 
-.right_bottom {
-    float: right;
-    width: 140px;
-    height: 140px;
-    background-image: url("../images/movie.jpg");
+.spot {
+    width: 90px;
+    height: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.spot span {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    margin:0 5px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+}
+
+.spot span:hover {
+    background-color: rgb(250, 125, 60);
 }
 
 .new001,
@@ -68,7 +100,11 @@
 .new008,
 .new009 {
     width: 650px;
-    border: 1px solid indigo;
-    height: 200px;
-    margin-left: 20px;
+    border-bottom: 1px solid indigo;
+    height: 220px;
+}
+
+.new001 video {
+    width: 325px;
+    height: 220px;
 }
