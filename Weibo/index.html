@@ -36,19 +36,18 @@
     <div class="next">
         <!-------------------- 导航栏 --------------------->
         <ul class="toolbar">
-            <li><a href="#">热门</a></li>
-            <li><a href="#">头条</a></li>
-            <li><a href="#">视频</a></li>
-            <li><a href="#">榜单</a></li>
-            <li><a href="#">搞笑</a></li>
-            <li><a href="#">社会</a></li>
-            <li><a href="#">时尚</a></li>
-            <li><a href="#">电影</a></li>
-            <li><a href="#">音乐</a></li>
-            <li><a href="#">体育</a></li>
-            <li><a href="#">动漫</a></li>
+            <li><a href="#" class="hot">热门</a></li>
+            <li><a href="#" onclick="click()">头条</a></li>
+            <li><a href="#" class="choose">视频</a></li>
+            <li><a href="#" class="choose">榜单</a></li>
+            <li><a href="#" class="choose">搞笑</a></li>
+            <li><a href="#" class="choose">社会</a></li>
+            <li><a href="#" class="choose">时尚</a></li>
+            <li><a href="#" class="choose">电影</a></li>
+            <li><a href="#" class="choose">音乐</a></li>
+            <li><a href="#" class="choose">体育</a></li>
+            <li><a href="#" class="choose">动漫</a></li>
         </ul>
-
         <!-------------------- 主要内容 ---------------------->
         <!--------------------- 轮播图 ----------------------->
         <div class="content">
@@ -114,85 +113,278 @@
                     </a>
                 </div>
             </div>
-            <script>
-                var items = document.getElementsByTagName("part");
-                
-            </script>
             <div class="spot">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-
+            <script>
+                var parts = document.getElementsByClassName("part");
+                var spots = document.getElementsByClassName("spot");
+                var index = 0; 
+                var roundImg = function (sp) {
+                    parts[0]
+                };
+            </script>
             <!--------------------- 动态新闻 -------------------->
             <div class="new001">
-                <video src="./video/FeelTheSounds.mp4" controls></video>
-                
+                <a href="#">
+                    <img src="./images/img001.jpg" alt="china go!" class="newImg">
+                    <div class="new_right_top">
+                        <span>
+                            【中国加油！大连
+                            <span>
+                                #大学生用落樱频出钟南山肖像#
+                            </span>
+                            ，致敬伟大医护】5月17日，辽宁大连两个大学生用樱花拼出钟南山的肖像画。此前一晚，因为大连挂起大风，大连的樱花掉落一地。得知两位小伙的目的后途径群众纷纷帮他们捡起落樱。看了视频后，不少网友表示，科学家才是年轻人的榜样！
+                        </span>
+                    </div>
+                    <div class="new_right_bottom">
+                        <div class="right_bottom_left">
+                            <img src="./images/head001.jpg" alt="head">
+                            <span>新浪新闻客户端&nbsp&nbsp&nbsp5月17日 22:37</span>
+                        </div>
+                        <div class="right_bottom_right">
+                            <div class="new_icon1"></div>
+                            <span>9852 | </span>
+                            <div class="new_icon2"></div>
+                            <span>3481 | </span>
+                            <div class="new_icon3"></div>
+                            <span>37197</span>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="new002">
-
+                <a href="#">
+                    <img src="./images/img002.jpg" alt="china go!" class="newImg">
+                    <div class="new_right_top">
+                        <span>
+                            来说说
+                            <span>
+                                #离婚的人为什么越来越多了#
+                            </span>
+                            ...
+                        </span>
+                    </div>
+                    <div class="new_right_bottom">
+                        <div class="right_bottom_left">
+                            <img src="./images/head002.jpg" alt="head">
+                            <span>一颗甜木&nbsp&nbsp&nbsp5月17日 19:50</span>
+                        </div>
+                        <div class="right_bottom_right">
+                            <div class="new_icon1"></div>
+                            <span>3982 | </span>
+                            <div class="new_icon2"></div>
+                            <span>21212 | </span>
+                            <div class="new_icon3"></div>
+                            <span>362790</span>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="new003">
-
+                <a href="#">
+                    <img src="./images/img003.jpg" alt="china go!" class="newImg">
+                    <div class="new_right_top">
+                        <span>
+                            风和日丽 三晒三晒的
+                            <span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="new_right_bottom">
+                        <div class="right_bottom_left">
+                            <img src="./images/head003.jpg" alt="head">
+                            <span>杨九郎L&nbsp&nbsp&nbsp5月17日 12:21</span>
+                        </div>
+                        <div class="right_bottom_right">
+                            <div class="new_icon1"></div>
+                            <span>13079 | </span>
+                            <div class="new_icon2"></div>
+                            <span>22944 | </span>
+                            <div class="new_icon3"></div>
+                            <span>165475</span>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="new004">
-
+                <a href="#">
+                    <img src="./images/img004.jpg" alt="china go!" class="newImg">
+                    <div class="new_right_top">
+                        <span>
+                            网友投稿：因为性格自卑在生活中处处被影响，自卑的性格导致自己敏感、胆小、没有自信...
+                            <span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="new_right_bottom">
+                        <div class="right_bottom_left">
+                            <img src="./images/head004.jpg" alt="head">
+                            <span>情感良言&nbsp&nbsp&nbsp5月17日 15:05</span>
+                        </div>
+                        <div class="right_bottom_right">
+                            <div class="new_icon1"></div>
+                            <span>3141 | </span>
+                            <div class="new_icon2"></div>
+                            <span>5392 | </span>
+                            <div class="new_icon3"></div>
+                            <span>76080</span>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="new005">
-
+                <a href="#">
+                    <img src="./images/img005.jpg" alt="china go!" class="newImg">
+                    <div class="new_right_top">
+                        <span>
+                            安利一个超级好用的视频剪辑网站！！
+                            <span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="new_right_bottom">
+                        <div class="right_bottom_left">
+                            <img src="./images/head005.jpg" alt="head">
+                            <span>当时我就震惊了&nbsp&nbsp&nbsp5月17日 15:10</span>
+                        </div>
+                        <div class="right_bottom_right">
+                            <div class="new_icon1"></div>
+                            <span>13813 | </span>
+                            <div class="new_icon2"></div>
+                            <span>492 | </span>
+                            <div class="new_icon3"></div>
+                            <span>5436</span>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="new006">
-
+            <div class="new002">
+                <a href="#">
+                    <img src="./images/img002.jpg" alt="china go!" class="newImg">
+                    <div class="new_right_top">
+                        <span>
+                            来说说
+                            <span>
+                                #离婚的人为什么越来越多了#
+                            </span>
+                            ...
+                        </span>
+                    </div>
+                    <div class="new_right_bottom">
+                        <div class="right_bottom_left">
+                            <img src="./images/head002.jpg" alt="head">
+                            <span>一颗甜木&nbsp&nbsp&nbsp5月17日 19:50</span>
+                        </div>
+                        <div class="right_bottom_right">
+                            <div class="new_icon1"></div>
+                            <span>3982 | </span>
+                            <div class="new_icon2"></div>
+                            <span>21212 | </span>
+                            <div class="new_icon3"></div>
+                            <span>362790</span>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="new007">
-
-            </div>
-            <div class="new008">
-
-            </div>
-            <div class="new009">
-
+            <div class="new002">
+                <a href="#">
+                    <img src="./images/img002.jpg" alt="china go!" class="newImg">
+                    <div class="new_right_top">
+                        <span>
+                            来说说
+                            <span>
+                                #离婚的人为什么越来越多了#
+                            </span>
+                            ...
+                        </span>
+                    </div>
+                    <div class="new_right_bottom">
+                        <div class="right_bottom_left">
+                            <img src="./images/head002.jpg" alt="head">
+                            <span>一颗甜木&nbsp&nbsp&nbsp5月17日 19:50</span>
+                        </div>
+                        <div class="right_bottom_right">
+                            <div class="new_icon1"></div>
+                            <span>3982 | </span>
+                            <div class="new_icon2"></div>
+                            <span>21212 | </span>
+                            <div class="new_icon3"></div>
+                            <span>362790</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
         <!--------------------- 登录栏 ---------------------->
         <div class="login">
+            <!-- <div class="fold">
+
+            </div> -->
             <div class="login_bg">
                 <div class="login_content">
-                    <div class="account">
-                        <a href="#" class="account_sign">账号登录</a>
-                        <a href="#" class="secure_sign">安全登录</a>
-                        <div class="email">
-                            <div class="head"></div>
-                            <input type="text" class="email_account" placeholder="邮箱/会员账号/手机号">
-                        </div>
-                        <div class="password">
-                            <div class="pass"></div>
-                            <input type="text" class="password_input" placeholder="请输入密码">
-                        </div>
-                        <div class="remember_forgot">
-                            <input type="checkbox" name="记住账号密码" class="checkbox">
-                            <span class="remember">记住我</span>
-                            <a href="#" class="forgot">忘记密码</a>
-                        </div>
-                        <a href="#" class="login_account">登录</a>
-                        <div class="immediate">
-                            <span class="no_account">还没有微博？</span>
-                            <a href="#" class="imm_sign_in">立即注册！</a>
-                        </div>
-                        <div class="method">
-                            <span class="other">其他登录：</span>
-                            <ul class="sign_icon">
-                                <li><a href="#" class="taobao"></a></li>
-                                <li><a href="#" class="qq"></a></li>
-                                <li><a href="#" class="mobile"></a></li>
-                                <li><a href="#" class="telecom"></a></li>
-                                <li><a href="#" class="three"></a></li>
-                            </ul>
-                        </div>
+                    <a href="#" class="account_sign" onclick="account()">账号登录</a>
+                    <a href="#" class="secure_sign" onclick="secure()">安全登录</a>
+                    <div class="email">
+                        <div class="head"></div>
+                        <input type="text" class="email_account" placeholder="邮箱/会员账号/手机号">
+                    </div>
+                    <div class="password">
+                        <div class="pass"></div>
+                        <input type="text" class="password_input" placeholder="请输入密码">
+                    </div>
+                    <div class="remember_forgot">
+                        <input type="checkbox" name="记住账号密码" class="checkbox">
+                        <span class="remember">记住我</span>
+                        <a href="#" class="forgot">忘记密码</a>
+                    </div>
+                    <a href="#" class="login_account">登录</a>
+                    <div class="immediate">
+                        <span class="no_account">还没有微博？</span>
+                        <a href="#" class="imm_sign_in">立即注册！</a>
+                    </div>
+                    <div class="method">
+                        <span class="other">其他登录：</span>
+                        <ul class="sign_icon">
+                            <li><a href="#" class="taobao"></a></li>
+                            <li><a href="#" class="qq"></a></li>
+                            <li><a href="#" class="mobile"></a></li>
+                            <li><a href="#" class="telecom"></a></li>
+                            <li><a href="#" class="three"></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <!-------------------------- 安全登录 ----------------------------->
+            <div class="login_bg_QC">
+                <div class="login_content">
+                    <a href="#" class="account_sign_QC" onclick="account()">账号登录</a>
+                    <a href="#" class="secure_sign_QC" onclick="secure()">安全登录</a>
+                    <img src="./images/QC_code.jpg" alt="二维码">
+                    <div class="immediate_QC">
+                        <span class="no_account">还没有微博？</span>
+                        <a href="#" class="imm_sign_in">立即注册！</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var account = function () {
+                    var ac = document.getElementsByClassName("login_bg")[0];
+                    var se = document.getElementsByClassName("login_bg_QC")[0];
+                    ac.style.zIndex = 100;
+                    se.style.zIndex = 0;
+                };
+
+                var secure = function () {
+                    var ac = document.getElementsByClassName("login_bg")[0];
+                    var se = document.getElementsByClassName("login_bg_QC")[0];
+                    ac.style.zIndex = 0;
+                    se.style.zIndex = 100;
+                };
+            </script>
             <!------------------------ 微博热门话题 ------------------------>
             <div class="hot_topic">
                 <h3>微博热门话题</h3>
@@ -278,15 +470,14 @@
                 <a href="" class="check_more">查看更多></a>
             </div>
         </div>
+        <!--------------------- 刷新栏 ---------------------->
+        <div class="right_bar">
+            <div class="blank"></div>
+            <a href="#" class="refresh"></a>
+            <a href="#" class="return"></a>
+        </div>
     </div>
-    <!--------------------- 刷新栏 ---------------------->
-    <div class="right_bar">
-        <div class="blank"></div>
-        <a href="#" class="refresh"></a>
-        <a href="#" class="return"></a>
-    </div>
-    </div>
-    <!-- <script src="./js/slider.js"></script> -->
+
 </body>
 
 </html>

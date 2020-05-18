@@ -137,6 +137,7 @@ ul {
 .next {
     width: 1230px;
     margin: 0 auto;
+    border: 1px solid saddlebrown;
 }
 
 .toolbar {
@@ -148,7 +149,7 @@ ul {
 
 .content {
     margin-top: 70px;
-    width: 700px;
+    width: 695px;
     height: 100%;
     float: left;
     margin-left: 120px;
@@ -162,14 +163,12 @@ ul {
 }
 
 .right_bar {
-    margin-left: 1530px;
+    margin-left: 1180px;
     margin-top: 70px;
     width: 40px;
     height: 100%;
     position: fixed;
 }
-
-
 
 .toolbar li {
     height: 40px;
@@ -181,10 +180,10 @@ ul {
     text-decoration: none;
     font-size: 16px;
     line-height: 40px;
-    color: black;
     width: 110px;
     height: 40px;
     border-radius: 5px;
+    color: black;
 }
 
 .toolbar li a:focus,
@@ -193,7 +192,5 @@ ul {
     color: white;
 }
 
-.toolbar li a.active {
-    background-image: linear-gradient(to right, rgb(251, 54, 48), rgb(254, 85, 53)100%);
-    color: white;
-}
+
+

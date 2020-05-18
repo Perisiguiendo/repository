@@ -8,6 +8,14 @@ input {
 }
 
 .login_bg {
+    position: absolute;
+    background-color: rgb(242, 242, 245);
+    width: 350px;
+    height: 325px;
+    z-index: 2;
+}
+
+.login_bg_QC {
     background-color: rgb(242, 242, 245);
     width: 350px;
     height: 325px;
@@ -25,7 +33,9 @@ input {
 
 .forgot,
 .account_sign,
-.secure_sign {
+.secure_sign,
+.account_sign_QC,
+.secure_sign_QC {
     color: rgb(128, 128, 128);
     font-size: 14px;
     margin-top: 15px;
@@ -46,6 +56,18 @@ input {
     margin-right: 15px;
     float: right;
     border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.account_sign_QC {
+    margin-left: 15px;
+    float: left;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.secure_sign_QC {
+    margin-right: 15px;
+    float: right;
+    border-bottom: 3px solid rgb(250, 125, 60);
 }
 
 .email,
@@ -89,7 +111,7 @@ input {
 .forgot,
 .no_account,
 .other {
-    font-size: 13px;
+    font-size: 12px;
     color: rgb(128, 128, 128);
 }
 
@@ -123,10 +145,24 @@ input {
     border-bottom: 1px solid rgb(233, 233, 233);
 }
 
+.immediate_QC {
+    height: 15px;
+    width: 142px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 5px;
+}
+
+.login_content>img {
+    margin-left: 61px;
+
+}
+
 .imm_sign_in {
     font-size: 13px;
     color: rgb(235, 115, 80);
 }
+
 
 .method {
     width: 275px;
@@ -204,3 +240,14 @@ input {
 .return:hover {
     background-image: url("../images/hover_top.jpg");
 }
+
+/* .fold {
+    width: 270px;
+    height: 270px;
+    border: 40px solid;
+    border-image: url(../images/phone.jpg);
+    border-image-repeat: round;
+    z-index: 1000;
+    position: absolute;
+    
+} */
