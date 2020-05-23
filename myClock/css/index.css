@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clock {
+    position: relative;
+    width: 378px;
+    height: 378px;
+    margin: 100px auto;
+    background-image: url();
+}
+
+.clock li {
+    position: absolute;
+}
+
+.clock li .hours img {
+
+}
+
+.clock li .hours img Q{
+
+}
+
+.clock li .hours img {
+
+}
+
+.clock li .hours img{
+    transform: rotate();
+    /* transition: tranform ; */
+
+}
+
+.clock li .minute img{
+    
+}
+
+.clock li .second img{
+    
+}
+
