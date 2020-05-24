@@ -3,41 +3,42 @@
     padding: 0;
 }
 
+ul {
+    list-style: none;
+}
+
 .clock {
     position: relative;
-    width: 378px;
-    height: 378px;
+    width: 500px;
+    height: 500px;
     margin: 100px auto;
-    background-image: url();
+    background-image: url(../images/clock.png);
 }
 
 .clock li {
     position: absolute;
 }
 
-.clock li .hours img {
-
+.hour img {
+    transform: rotate(720deg);
 }
 
-.clock li .hours img Q{
-
+.init img {
+    transition: transform 86400s linear;
 }
 
-.clock li .hours img {
-
+.minute img {
+    transform: rotate(8640deg);
 }
 
-.clock li .hours img{
-    transform: rotate();
-    /* transition: tranform ; */
-
+.clock .init img {
+    transition: transform 86400s linear;
 }
 
-.clock li .minute img{
-    
+.second img {
+    transform: rotate(518400deg);
 }
 
-.clock li .second img{
-    
+.clock .init img {
+    transition: transform 86400s linear;
 }
-
