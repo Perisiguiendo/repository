@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    height: 42px;
+    width: 450px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.container .schoolSelect {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #53cac3; */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.container .schoolSelect span {
+    display: block;
+    font-size: 16px;
+    width: 80px;
+    height: 42px;
+    line-height: 42px;
+    margin-left: 18px;
+    font-weight: 400;
+    color: #61687c;
+    cursor: pointer;
+}
+
+.container .schoolSelect i {
+    position: absolute;
+    left: 100px;
+    top: 15px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url();
+}
+
+.container .dragDown {
+    width: 100%;
+    height: 300px;
+    background-color: #d1d4db;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 9999;
+    top: 42px;
+}
+
+.container .dragDown ul {
+    width: 150px;
+    height: 100%;
+    float: left;
+    background-color: white;
+    overflow: scroll;
+}
+
+.container .dragDown ul li {
+    width: 120px;
+    height: 50px;
+    padding-left: 28px;
+    line-height: 50px;
+    font-size: 13px;
+    color: #8d92a1;
+    margin-right: 2px;
+}
+
+.container .dragDown ul li:hover {
+    background-color: #edf0f3;
+}
+
+/* 滚动条的样式 */
+.container .dragDown ul::-webkit-scrollbar {
+    /* 滚动条的样式 */
+    width: 4px;
+    height: 0;
+}
+
+.container .dragDown ul::-webkit-scrollbar-thumb {
+    /* 滑块的样式 */
+    background-color: #d1d4db;
+    border-radius: 2px;
+}
+
+.container .dragDown ul .school {
+    display: none;
+}
+

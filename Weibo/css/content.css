@@ -5,15 +5,7 @@
 
 .slideshow,
 .spot,
-.new001,
-.new002,
-.new003,
-.new004,
-.new005,
-.new006,
-.new007,
-.new008,
-.new009 {
+.news {
     margin-left: 22px;
 }
 
@@ -90,20 +82,29 @@
     background-color: rgb(250, 125, 60);
 }
 
-.new001,
-.new002,
-.new003,
-.new004,
-.new005 {
+.news {
     width: 650px;
     border-bottom: 1px solid rgb(229, 229, 229);
     height: 130px;
+    margin-bottom: 10px;
 }
 
 .newImg {
     width: 180px;
     height: 120px;
     float: left;
+}
+
+.news>a {
+    width: auto;
+    height: 110px;
+}
+
+.new_right_top {
+    float: right;
+    height: 70px;
+    width: auto;
+    margin-top: 10px;
 }
 
 .new_right_top>span {
@@ -117,7 +118,7 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
     line-height: 24px;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 .new_right_top>span>span {
@@ -153,19 +154,19 @@
 
 .new_icon1 {
     background-image: url("../images/new_icon1.jpg");
-    width: 20px; 
+    width: 20px;
     height: 20px;
 }
 
 .new_icon2 {
     background-image: url("../images/new_icon2.jpg");
-    width: 20px; 
+    width: 20px;
     height: 20px;
 }
 
 .new_icon3 {
     background-image: url("../images/new_icon3.jpg");
-    width: 20px; 
+    width: 20px;
     height: 20px;
 }
 
@@ -179,4 +180,4 @@
 
 .new_icon3:hover {
     background-image: url("../images/new_icon3_hover.jpg");
-} 
+}
