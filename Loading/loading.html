@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" href="./loading.css">
+</head>
+<body>
+    <div class="content">
+        <div class="text">
+            <h2>Hello WOrld!</h2>
+            <h4>Light your fire</h4>
+        </div>
+        <div class="monster">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+        <div class="monster blue">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+    <div class="page-loading">
+        <div class="monster">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+        <div class="loading-bar">
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <script>
+        var bar = document.querySelector('.bar');
+        var pageLoading = document.querySelector('page-loading');
+        var per = 0;
+        var timer = setInterval(function () {
+            per += 1;
+            bar.style.width = per + '%';
+            if(per === 100){
+                clearInterval(timer);
+                pageLoading.classList.add('complete');
+            }
+        },50);
+    </script>
+</body>
+</html>
