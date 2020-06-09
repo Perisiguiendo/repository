@@ -25,7 +25,7 @@
             <div class="mouth"></div>
         </div>
     </div>
-    <div class="page-loading">
+    <div class="page-loading" id="page">
         <div class="monster">
             <div class="eye">
                 <div class="eyeball"></div>
@@ -33,13 +33,13 @@
             <div class="mouth"></div>
         </div>
         <div class="loading-bar">
-            <div class="bar"></div>
+            <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
 
     <script>
         var bar = document.querySelector('.bar');
-        var pageLoading = document.querySelector('page-loading');
+        var pageLoading = document.getElementById('page');
         var per = 0;
         var timer = setInterval(function () {
             per += 1;
