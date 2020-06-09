@@ -3,82 +3,76 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=`, initial-scale=1.0">
     <title>欢迎来到聊天室</title>
     <link rel="stylesheet" href="./css/loading.css">
     <style>
         .STYLE1 table {
-            border: 1px solid honeydew;
             margin: 0 auto;
-            width: 1000px;
-            height: 800px;
-            border-radius: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
-    <!-- <div class="monster">
-        <div class="eye">
-            <div class="eyeball"></div>
+    <div class="top">
+        <div class="monsterChat blue">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
         </div>
-        <div class="mouth"></div>
+        <div class="monsterChat">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
     </div>
-    <div class="monster blue">
-        <div class="eye">
-            <div class="eyeball"></div>
-        </div>
-        <div class="mouth"></div>
-    </div> -->
-    <BR />
-    <BR />
-    <BR />
-
     <div class="STYLE1">
         <form action="../serviceChat" method="get">
-            <table  bordercolor="#7E9EE5" bgcolor="#0066CC">
+            <table style="width: 614px;height: 425px;border: 1px solid #fff;background-color: rgb(255, 59, 33);"
+                cellpadding="0" cellspacing="0">
                 <tr>
-                    <td style="width: 600px;height: 30px;background-color: #7E9EE5;border-radius: 20px 0 0 0">
-                        <h3 style="color: #fff;font-size: 20px;text-align: center;">Enjoy Yourself</h3>
+                    <td style="width: 421px;height: 23px;background-color: #0c4475;border-radius: 10px 0 0 0;">
+                        <h3 style="color: #fff;text-align: center;">Enjoy Yourself</h3>
                         <!-- <font size="-1" color="purple"></font> -->
                     </td>
                 </tr>
                 <tr>
-                    <td style="height: 500px;background-color: #ffff44;">
-                        <iframe width="485" height="260" src="text.jsp"></iframe>
+                    <td style="height: 259px;background-color: #fff;">
+                        <iframe style="width: 485px;height: 260px;" src="text.jsp"></iframe>
                     </td>
-                    <td rowspan="4" bgcolor="#FFFFFF">
-                        <iframe style="width: 400px;" width="400px" height="415" src="clients.jsp"></iframe>
+                    <td rowspan="4" style="background-color: #fff;">
+                        <iframe style="width: 200px;height: 415px;" src="clients.jsp"></iframe>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        您想对
+                        To&nbsp;
                         <select name="clientname">
                             <c:forEach var="client" items="${clients}">
                                 <br>
                                 <option value="${client.username}">${client.username}</option>
                             </c:forEach>
                         </select>
-                        说:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="button" value="刷新用户" onclick="history.go(0);" />
+                        say:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="fresh" type="button" value="刷新用户" onclick="history.go(0);" />
                     </td>
-
                 </tr>
                 <tr>
-                    <td height="87" bgcolor="#FFFFFF">
+                    <td style="height: 87px;background-color: #fff;">
                         <textarea id="content" name="content" cols="58" rows="6"></textarea>
-                <tr>
-                    <td height="21" bgcolor="#7E9EE5">
-                        <input type="submit" name="Submit" value="发 送">
-                        <input type="reset" name="Submit2" value="取 消">
-                    </td>
-
+                    </td>>
                 </tr>
-
+                <tr>
+                    <td style="height: 21px;background-color: #0c4475;">
+                        <input class="send" type="submit" name="Submit" value="发 送">
+                        <input class="quit" type="reset" name="Submit2" value="取 消">
+                    </td>
+                </tr>
             </table>
         </form>
-        </center>
+    </div>
 </body>
 
 </html>

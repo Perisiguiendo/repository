@@ -60,12 +60,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* 改变主轴方向为从上到下的 */
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     transition: transform 0.4s;
     animation: jumping 0.8s infinite alternate;
+}
+
+.monsterChat {
+    width: 110px;
+    height: 100px;
+    background-color: rgb(236, 71, 21);
+    margin-left: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 @keyframes jumping {
@@ -85,12 +99,14 @@ body {
     }
 }
 
-.monster.blue {
+.monster.blue,
+.monsterChat.blue {
     background-color: #0c4475;
-    animation-delay: 0.3s;
+    animation-delay: 0.4s;
 }
 
-.monster .eye {
+.monster .eye,
+.monsterChat .eye {
     width: 44px;
     height: 40px;
     background-color: #fff;
@@ -100,7 +116,8 @@ body {
     align-items: center;
 }
 
-.monster .mouth {
+.monster .mouth,
+.monsterChat .mouth {
     width: 35px;
     height: 12px;
     background-color: #fff;
@@ -108,7 +125,8 @@ body {
     margin-top: 15px;
 }
 
-.monster .eye .eyeball {
+.monster .eye .eyeball,
+.monsterChat .eye .eyeball {
     width: 50%;
     height: 50%;
     border-radius: 50%;
@@ -127,12 +145,15 @@ body {
 }
 
 
-.monster.blue .eye .eyeball {
+.monster.blue .eye .eyeball,
+.monsterChat.blue .eye .eyeball {
     background-color: rgb(236, 71, 21);
 }
 
 .monster::before,
-.monster::after {
+.monster::after,
+.monsterChat::after,
+.monsterChat::before {
     content: '';
     width: 20%;
     height: 10px;
@@ -144,11 +165,13 @@ body {
     transform: translateX(-70%) rotate(45deg);
 }
 
-.monster::after {
+.monster::after,
+.monsterChat::after {
     transform: translateX(-30%) rotate(-45deg);
 }
 
-.monster.blue .mouth {
+.monster.blue .mouth,
+.monsterChat.blue .mouth {
     background-color: rgb(236, 71, 21);
 }
 
@@ -176,4 +199,38 @@ body {
     width: 3em;
     height: 2em;
     vertical-align: bottom;
+}
+
+.top {
+    height: 15%;
+    margin: 20px auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fresh,
+.send,
+.quit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 0.8em;
+    color: #0c4475;
+    background-color: #fff;
+}
+
+.fresh {
+    height: 1.8em;
+    width: 6em;
+    border-radius: 6px;
+    outline: 0;
+}
+
+.send,
+.quit {
+    height: 1.8em;
+    width: 5em;
+    margin-left: 10px;
+    border-radius: 6px;
+    outline: 0;
 }
