@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatting Room</title>
+    <link rel="stylesheet" href="./css/loading.css">
+    <style>
+        .STYLE1 table {
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="monsterChat blue">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+        <div class="monsterChat">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+    <div class="STYLE1">
+        <form action="../chat" method="get">
+            <table style="width: 490px;height: 425px;border: 1px solid #fff;" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 421px;height: 23px;background-color: #0c4475;">
+                        <h3 style="color: #fff;text-align: center;">Chatting Room</h3>
+                        <h4 style="color: #fff;text-align: center;">${clientName}</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 259px;background-color: #fff;">
+                        <iframe style="width: 485px;height: 260px;" src="text.jsp"></iframe>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 87px;background-color: #fff;">
+                        <textarea id="content" name="content" cols="58" rows="6"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 21px;background-color: rgb(236, 71, 21);">
+                        <input class="send" type="submit" name="Submit" value="发 送">
+                        <input class="quit" type="reset" name="Submit2" value="取 消">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
