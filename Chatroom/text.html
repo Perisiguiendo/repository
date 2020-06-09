@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%
+        response.setHeader("refresh","2");//每两秒钟刷新一次页面
+       /* 
+        <meta http-equiv="refresh" content="1"> //也可以刷新页面
+       */
+     %>
+      ${content}
+    </body>
+</html>

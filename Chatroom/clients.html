@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients</title>
+    <link rel="stylesheet" href="./css/loading.css">
+    <style>
+        .shield {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            font-size: 0.8em;
+            height: 2.4em;
+            width: 4em;
+            font-size: 15px;
+            border-radius: 10px;
+            color: #0c4475;
+            outline: 0;
+            background-color: #fff;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function ss(f) {
+            var xmlHttp;
+            f = f.replace(/^\s*/, "").replace(/\s*$/, "");
+
+            var url = '${pageContext.request.contextPath}/setFlag?' + param;
+            url
+            if (window.ActiveXObject) {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } else if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+            }
+            xmlHttp.open("post", url, true);
+            xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
+            var param = "username=" + encodeURI(f) + "&" + new Date();
+            xmlHttp.send(param);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="icon" style="margin-top: 50px;">
+        <div class="monster">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+        <div class="monster blue">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+    &nbsp;
+    <h2 style="color: #fff;text-align: center;">当前用户有:</h2>
+
+    <h4 color="#3399FF" style="color: #fff;text-align: center;">
+        <c:forEach var="client" items="${clients}">
+            <br>
+            <span id="username">${client.username}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <input class="shield" type="button" value="屏蔽" onclick="ss('${client.username}');" />
+        </c:forEach>
+    </h4>
+</body>
+
+</html>
