@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>新增学生信息页面</title>
+    <link rel="stylesheet" href="main.css">
+    <style type="text/css">
+        tr {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-">
+        <div class="monsterChat blue" style="left: 25%;top: 240px;transform: rotate(-20deg);">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+        <div class="monsterChat" style="left: 15%;top: 50px;">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+    <div style="margin: 0 0 0 300px;">
+        <form action="addStuInfoReq?reqType=ADD_STU_INFO" method="POST">
+            <div style="margin: 0 auto;">
+                <table  style="width: 600px;background-color: #fff;">
+                    <th colspan="2" style="height: 50px;border-radius: 10px 10px 0 0;">新增学生信息</th>
+                    <tr>
+                        <td style="border-right: 2px solid #66666656;height: 50px;">学生学号：</td>
+                        <td> <input type="text" name="stuSno"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 2px solid #66666656;height: 50px;">学生姓名：</td>
+                        <td><input type="text" name="stuSname"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 2px solid #66666656;height: 50px;">学生性别：</td>
+                        <td><select width="300px" name="stuSsex">
+                                <option>男</option>
+                                <option>女</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 2px solid #66666656;height: 50px;">学生年龄：</td>
+                        <td><input type="text" name="stuSage"> <input type="hidden" name="classId"
+                                value="<%=request.getParameter("cid")%>"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 2px solid #66666656;height: 50px;"><input style="width: 100px;" type="reset" value="重置"></td>
+                        <td><input type="submit" value="确定" style="width: 100px;"></td>
+                    </tr>
+                </table>
+            </div>
+
+        </form>
+    </div>
+
+    <div style="margin: 0 auto; margin-top: 100px;">
+        <div>
+            <table style="margin: 0 auto;width: 80%;background-color: #fff;">
+                <th style="margin-bottom: 20px;height: 50px;border-radius: 10px 10px 0 0;" colspan="7">学生信息列表</th>
+                <tr style="height: 50px;">
+                    <td style="border-right: 2px solid #66666656;">所属班级</td>
+                    <td style="border-right: 2px solid #66666656;">学生学号</td>
+                    <td style="border-right: 2px solid #66666656;">学生姓名</td>
+                    <td style="border-right: 2px solid #66666656;">学生性别</td>
+                    <td style="border-right: 2px solid #66666656;">学生年龄</td>
+                    <td style="border-right: 2px solid #66666656;">余额</td>
+                    <td> 操作类型 </td>
+                </tr>
+                <%  
+                    List<StudentInfoBean> stuInfo=(List<StudentInfoBean>)request.getAttribute("studentInfo");  
+                	if(stuInfo!=null && !stuInfo.isEmpty()){  
+                	for(StudentInfoBean stu: stuInfo){  
+                %>
+                <tr style="height: 50px;">
+                    <td style="border-right: 2px solid #66666656;"><%=stu.getCid()%></td>
+                    <td style="border-right: 2px solid #66666656;"><%=stu.getSno()%></td>
+                    <td style="border-right: 2px solid #66666656;"><%=stu.getSname()%></td>
+                    <td style="border-right: 2px solid #66666656;"><%=stu.getSsex()%></td>
+                    <td style="border-right: 2px solid #66666656;"><%=stu.getSage()%></td>
+                    <td style="border-right: 2px solid #66666656;"><%=stu.getSbalance()%></td>
+                    <td style="width: 100px;"><a class="stu-a">充值</a> <a class="stu-a">消费</a></td>
+                </tr>
+                <%  
+                    }  
+                }
+                %>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

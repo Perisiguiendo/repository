@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>班级信息界面</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="monsterChat blue">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+        <div class="monsterChat">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+    <div style="margin:0 auto;width: 571px;display: block;height: 40px;">
+        <ul>
+            <li><a href="#home" class="a-a">主页</a></li>
+            <li><a href="#news" class="help">使用帮助</a></li>
+            <li><a href="#contact" class="a-a">个人信息</a></li>
+        </ul>
+    </div>
+    <div style="margin:0 auto;margin-top: 40px;height: 300px;">
+        <form action="classInfoReq" method="POST">
+            <div style="margin: 0 auto;height: 200px;">
+                <table style="width: 600px;height: 200px;margin: -20px auto;background-color: #fff;" cellspacing="0">
+                    <th style="color: #666;font-size: 23px;font-weight: bold;border-radius: 10px;" colspan="2">
+                        新增班级信息
+                    </th>
+                    <tr>
+                        <td style="border-right: 2px solid #66666656;">班级名称：</td>
+                        <td><input type="text" name="className"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 2px solid #66666656;">班级序号:</td>
+                        <td><input type="text" name="classId"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 2px solid #66666656;"><input type="reset" value="重置" style="width: 100px;"></td>
+                        <td><input type="submit" value="确定" style="width: 100px;"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+
+    <div style="margin:0 auto;">
+        <div style="margin: 0 auto;">
+            <table style="width: 600px;background-color: #fff;">
+                <th colspan="3"
+                    style="color: #666;font-size: 23px;font-weight: bold;height: 50px;border-radius: 10px 10px 0 0;">
+                    班级信息列表
+                </th>
+                <tr style="height: 50px;">
+                    <td style="border-right: 2px solid #66666656;">班级序号</td>
+                    <td style="border-right: 2px solid #66666656;">班级名称</td>
+                    <td>班级明细</td>
+                </tr>
+                <% List<ClassInfoBean> classInfo=(List<ClassInfoBean>)request.getAttribute("classInfo");  
+		    if(classInfo!=null && !classInfo.isEmpty()){  
+		        for(ClassInfoBean classes : classInfo){  
+		            %>
+                <tr style="height: 50px;">
+                    <td style="border-right: 2px solid #66666656;"><%=classes.getCid() %></td>
+                    <td style="border-right: 2px solid #66666656;"><%=classes.getCname()%></td>
+                    <td>
+                        <a style="color: #666;"
+                            href="http://localhost:8080/student/findAllStudentByClassId?reqType=FIND_STUDENT_BY_CLASS_ID&cid=<%=classes.getCid()%>">查看明细
+                        </a>
+                    </td>
+                </tr>
+                <%
+			}  
+		    }  
+		%>
+            </table>
+            </center>
+        </div>
+        <select>
+            <option value="value1"> 选项1</option>
+            <option value="value2"> 选项2</option>
+        </select>
+</body>
+
+</html>

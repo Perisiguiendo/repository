@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" href="./loading.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="text">
+            <h2>Hello WOrld!</h2>
+            <h4>Light your fire</h4>
+        </div>
+        <div class="monster">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+        <div class="monster blue">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+    <div class="page-loading" id="page">
+        <div class="monster">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+        <div class="loading-bar">
+            <div class="bar" style="width: 100%;"></div>
+        </div>
+    </div>
+
+    <div id="form-info" style="display: flex;justify-content: center;align-items: center;margin-top: -100px;">
+        <form action="CheckLogin" method="post">
+            <div style="margin: 0 auto;font-size: 20px;color: #fff;font-weight: bold;width: 400px;">
+                <tr>
+                    <td> 用户名：</td>
+                    <td> <input type="text" name="username"></td>
+                </tr>
+                
+                <br>
+                <br>
+                <tr>
+                    <td>&nbsp;&nbsp; 密码： </td>
+                    <td><input type="text" name="password"></td>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td><span style="margin-left: 150px;"></span><input style="width: 150px;font-size: 16px;color: #666;font-weight: bold;" type="submit" value="确定"></td>
+                </tr>
+            </div>
+
+            </from>
+    </div>
+    <%
+        if(request.getParameter("ifture")!=null){
+        
+        }
+        %>
+
+
+    <script>
+        var bar = document.querySelector('.bar');
+        var pageLoading = document.getElementById('page');
+        var formInfo = document.getElementById('form-info')
+        var per = 0;
+        var timer = setInterval(function () {
+            per += 2;
+            bar.style.width = per + '%';
+            if (per === 100) {
+                clearInterval(timer);
+                pageLoading.classList.add('complete');
+                formInfo.style.zIndex = 9999;
+            }
+        }, 50);
+    </script>
+</body>
+
+</html>

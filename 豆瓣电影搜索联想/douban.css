@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* reset.css */
+
+body {
+    background-color: #f0f3f5;
+}
+
+li {
+    list-style: none;
+}
+
+#app {
+    margin: 100px auto 0;
+    width: 804px;
+}
+
+#app::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.logo,
+.search {
+    float: left;
+}
+
+.logo {
+    margin-right: 13px;
+    width: 115px;
+    height: 27px;
+    background-image: url();
+    /* background-position-y: center; */
+}
+
+.logo a {
+    width: 115px;
+    height: 27px;
+    display: block;
+}
+
+.search {
+    position: relative;
+}
+
+.search-inp {
+    width: 470px;
+    height: 30px;
+}
+
+.search-inp input {
+    width: 100%;
+    box-shadow: 0px 1px 2px #f0f3f5;
+    height: 100%;
+    padding-left: 10px;
+    outline: none;
+    /* border-radius: 2px ; 左下左上有圆角*/
+    border: none;
+}
+
+.search-btn {
+    width: 37px;
+    height: 34px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #929ba2;
+    position: absolute;
+    top: 0;
+    left: 480px;
+    background-image: url();
+}
+
+.search-list {
+    border: 1px solid #ddd;
+    border-bottom: none;
+    background-color: #fff;
+    width: 480px;
+}
+
+.search-info {
+    border-bottom: 1px solid #ddd;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.poster,
+.content {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.poster {
+    width: 45px;
+    height: 63px;
+}
+
+.poster img {
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    margin-left: 5px;
+}
+
+.title {
+    color: #27a;
+    font-size: 14px;
+}
+
+.year,
+.sub-title,
+.episode {
+    color: #9b9b9b;
+    font-size: 12px;
+}
+
+.sub-title {
+
+}
