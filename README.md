@@ -19,4 +19,8 @@
 # 弹性盒子
 
 # 网页loading动画
-![image](https://github.com/Perisiguiendo/repository/blob/master/Loading/loading.gif)
+
+# 饿了么谁去拿外卖
+- 弹窗
+- 随机数dom渲染
+- 最小数特殊样式，到达顶部时停留，直到出现比它还小的数
