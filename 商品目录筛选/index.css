@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #eeeeee;
+}
+
+#box {
+    background-color: #ffffff;
+    width: 850px;
+    height: 400px;
+    margin: 50px auto;
+    padding-top: 20px;
+    box-shadow: 0 0 10px #494249;
+}
+
+#box dl {
+    width: 810px;
+    margin: 0 20px;
+    display: inline-block;
+    /* border: 1px solid #bbbbbb; */
+    border-bottom: 1px solid #eeeeee;
+}
+
+#box dt {
+    line-height: 50px;
+    float: left;
+    color: #8a8a8a;
+} 
+
+#box dd {
+    line-height: 52px;
+    float: left;
+    font-size: 14px;
+    color: #252525;
+    cursor: pointer;
+    margin: 0 10px; 
+
+}
+
+#box dd:active {
+    color: rgb(250, 98, 10);
+}
+
+#box dl.select {
+    margin: 0;
+    padding: 0 20px;
+}
+
+#box dl.select dd {
+    border: 1px solid #e25b39;
+    line-height: 25px;
+    margin-top: 11px;
+    padding: 0 0 0 10px;
+    cursor: auto;
+}
+
+#box dl.select dd span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: #e25b39;
+    line-height: 25px;
+    text-align: center;
+    color: #ffffff;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+
