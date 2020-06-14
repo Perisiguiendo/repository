@@ -40,7 +40,7 @@ body {
 
 }
 
-#box dd:active {
+#box dd.active {
     color: rgb(250, 98, 10);
 }
 
