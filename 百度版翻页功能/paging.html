@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paging</title>
+    <style>
+        .pager {
+            text-align: center;
+        }
+
+        .pager a {
+            text-decoration: none;
+            font-size: 18px;
+            border: 1px solid #e1e2e3;
+            height: 34px;
+            display: inline-block;
+            line-height: 34px;
+            padding: 0 12px;
+            margin: 8px;
+            cursor: pointer;
+        }
+
+        .pager a.active {
+            color: rgb(255, 81, 0);
+            border: none;
+            cursor: auto;
+        }
+
+        .pager a.disable {
+            color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="pager">
+        <a href="" class="disable">首页</a>
+        <a href="">上一页</a>
+        <a href="">1</a>
+        <a href="" class="active">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">6</a>
+        <a href="">7</a>
+        <a href="">8</a>
+        <a href="">9</a>
+        <a href="">10</a>
+        <a href="">下一页</a>
+        <a href="">尾页</a>
+        <span>1 / 100</span>
+    </div>
+    
+</body>
+</html>
