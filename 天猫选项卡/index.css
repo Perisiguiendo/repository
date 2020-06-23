@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    background: #e5e5e5;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#tab {
+    width: 1230px;
+    margin: 100px auto 0 auto;
+}
+
+.nav {
+    width: 200px;
+    height: 320px;
+    background: rgba(0, 0, 0, .5);
+    float: left;
+}
+
+.nav li {
+    height: 32px;
+    line-height: 32px;
+    color: #ffffff;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.nav li a {
+    color: #ffffff;
+}
+
+.nav li.active {
+    background: #ffffff;
+}
+
+.nav li.active a {
+    color: #e54077;
+    font-weight: bold;
+}
+
+.content {
+    width: 1030px;
+    float: left;    /******浮动的添加**********/
+    background: #ffffff;
+}
+
+.content .item {
+    height: 320px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.content .item.active {
+    display: block;
+
+}
+
+.content .title {
+    float: left;
+    width: 100px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.content .list {
+    float: right;
+    width: 870px;
+}
+
+.content .list {
+    display: inline-block;
+    color: #666666;
+    margin: 0 20px 10px 0;
+}
+
+.content .list a.highlight {
+    color: #e54077;
+}
