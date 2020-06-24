@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="title">黄金首ff饰></div>
+                <div class="title">钻石首饰></div>
                 <a href="#" class="highlight">进口啤酒</a>
                 <a href="#" class="highlight">进口啤酒</a>
                 <a href="#">进口酒</a>
@@ -61,7 +61,7 @@
                 <a href="#">进口啤</a>
             </div>
             <div class="item">
-                <div class="title">黄金首ffff饰></div>
+                <div class="title">宝石首饰></div>
                 <a href="#" class="highlight">进口啤酒</a>
                 <a href="#" class="highlight">进口啤酒</a>
                 <a href="#" class="highlight">进口啤酒</a>
@@ -69,7 +69,7 @@
                 <a href="#">进口啤</a>
             </div>
             <div class="item">
-                <div class="title">黄金首ffff饰></div>
+                <div class="title">首饰珠宝></div>
                 <a href="#" class="highlight">进口啤酒</a>
                 <a href="#" class="highlight">进口啤酒</a>
                 <a href="#" class="highlight">进口啤酒</a>
@@ -82,7 +82,7 @@
                 <a href="#">进口啤</a>
             </div>
             <div class="item">
-                <div class="title">黄金首饰f></div>
+                <div class="title">黄金水果></div>
                 <a href="#" class="highlight">进口啤酒</a>
                 <a href="#" class="highlight">进口啤酒</a>
                 <a href="#" class="highlight">进口啤酒</a>
@@ -109,8 +109,8 @@
 
     <script>
         //第一个方案
-        var lis = document.querySelectorAll('li');
-        var items = document.querySelectorAll('.item');
+        // var lis = document.querySelectorAll('li');
+        // var items = document.querySelectorAll('.item');
 
         // for (var i = 0; i < lis.length; i++) {
         //     lis[i].index = i;
@@ -118,30 +118,35 @@
         //     lis[i].onmouseover = function () {
         //         this.className = 'active';
         //         items[this.index].style.display = 'block';
+        //         for (var i = 0; i < items.length; i++) {
+        //             items[i].onmouseover = function () {
+        //                 lis[this.index].className = 'active';
+        //                 items[this.index].style.display = 'block';
+        //             }
+        //             items[i].onmouseout = function () {
+        //                 lis[this.index].className = '';
+        //                 items[this.index].style.display = 'none';
+        //             }
+        //         }
         //     }
-        //     lis[i].onmouseleave = function () {
+        //     lis[i].onmouseout = function () {
         //         this.className = '';
         //         items[this.index].style.display = 'none';
         //     }
-
-        //     items[i].onmouseover = function () {
-        //         this.classList.add('active');
-        //         lis[this.index].className = 'active';
-        //     }
-
-
         // }
-
+        //*******************************************************
+        //第二个方案
+        var lis = document.querySelectorAll('li');
+        var items = document.querySelectorAll('.item');
         var ln = 0;
         for (var i = 0; i < lis.length; i++) {
             lis[i].index = i;
+            items[i].index = i;
             lis[i].onmouseover = function () {
-                lis[ln].className = '';
-                items[ln].classList.remove('active');
-
                 this.className = 'active';
                 items[this.index].classList.add('active');
                 ln = this.index;
+                console.log(ln);
             };
 
             lis[i].onmouseout = function () {
@@ -150,12 +155,9 @@
             };
 
             items[i].onmouseover = function () {
-                // lis[ln].className = '';
-                // items[ln].classList.remove('active');
-
-                // this.className = 'active';
-                // items[this.index].classList.add('active');
-                // ln = this.index;
+                this.className = 'active';
+                lis[this.index].classList.add('active');
+                ln = this.index;
             }
 
             items[i].onmouseout = function () {
