@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三列布局，中间自适应</title>
+    <!--
+			1.两边固定  当中自适应
+			2.当中列要完整显示
+			3.当中列要优先加载
+        -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {}
+
+        .left,
+        .right {
+            width: 200px;
+        }
+
+        .left {
+            float: left;
+            height: 150px;
+            background: #b82727;
+        }
+
+        .right {
+            float: right;
+            height: 150px;
+            background: #27b833;
+        }
+
+        .middle {
+            height: 150px;
+            background: #15b2c7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="middle">right</div>
+    <div class="left">left</div>
+    <div class="right">middle</div>
+</body>
+
+</html>

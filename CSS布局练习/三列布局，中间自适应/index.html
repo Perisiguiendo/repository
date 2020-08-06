@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三列布局，中间自适应</title>
+    <!--   尽量不要用定位做网页框架！！！
+			1.两边固定  当中自适应
+			2.当中列要完整显示
+	    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .left,
+        .right {
+            width: 200px;
+        }
+
+        .left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 150px;
+            background: #b82727;
+        }
+
+        .right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 150px;
+            background: #27b833;
+        }
+
+        .middle {
+            padding: 0 200px;
+            height: 150px;
+            background: #15b2c7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left"></div>
+    <div class="middle"></div>
+    <div class="right"></div>
+</body>
+
+</html>

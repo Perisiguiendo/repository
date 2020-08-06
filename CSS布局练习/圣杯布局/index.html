@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--   尽量不要用定位做网页框架！！！
+			1.两边固定  当中自适应
+			2.当中列要完整显示
+        -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header,
+        .footer {
+            height: 100px;
+            background: #19b819;
+        }
+
+        .main {
+            padding: 0 200px;
+        }
+
+        .main .middle {
+            float: left;
+            width: 100%;
+            background: #b614df;
+        }
+
+        .main .left {
+            position: relative;
+            left: -200px;
+            float: left;
+            margin-left: -100%;
+            width: 200px;
+            background: #ce8e05;
+        }
+
+        .main .right {
+            position: relative;
+            right: -200px;
+            float: left;
+            margin-left: -200px;
+            width: 200px;
+            background: #0947f1;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">header</div>
+    <div class="main clearfix">
+        <div class="middle">
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+            middle<br />
+        </div>
+        <div class="left">
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+            left<br />
+        </div>
+        <div class="right">
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+            right<br />
+        </div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>

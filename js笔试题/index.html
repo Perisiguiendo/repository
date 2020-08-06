@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function paddingNum(Number) {
+        //     var arr = Number.toString().split('.');
+        //     if (arr[1]) {
+        //         var String = '';
+
+        //         for (let i = arr[0].length - 1; i >= 0; i--) {
+        //             if ((arr[0].length - i) % 3 == 0) {
+        //                 String = ',' + arr[0][i] + String;
+        //             } else {
+        //                 String = arr[0][i] + String;
+        //             }
+        //         }
+        //         return String.concat('.' + arr[1]);
+        //     } else {
+        //         var String = '';
+
+        //         for (let i = arr[0].length - 1; i >= 0; i--) {
+        //             if ((arr[0].length - i) % 3 == 0) {
+        //                 if (i === 0) {
+        //                     String = arr[0][i] + String;
+        //                 } else {
+        //                     String = ',' + arr[0][i] + String;
+        //                 }
+        //             } else {
+        //                 String = arr[0][i] + String;
+        //             }
+        //         }
+        //         return String;
+        //     }
+
+        // }
+
+
+        // console.log(paddingNum(-987654.3));
+        function duplicate(numbers, duplication) {
+            // write code here
+            //这里要特别注意~找到任意重复的一个值并赋值到duplication[0]
+            //函数返回True/False
+            var nums = [];
+            for (var i = 0; i < numbers.length; i++) {
+                if(nums[numbers[i]] === numbers[i]){
+                    return duplication[0] = numbers[i];
+                } else {
+                    nums[numbers[i]] = numbers[i];
+                }
+            }
+        }
+
+        console.log(duplicate([2, 3, 0, 0, 2, 5, 3], 0));
+    </script>
+
+</body>
+
+</html>
